@@ -1,23 +1,22 @@
 package org.elasticsearch.toy.model;
 
-import com.opencsv.bean.CsvBindByPosition;
-
-public class Subway {
-
-    @CsvBindByPosition(position = 0)
+public class SubwayDocument {
     private String code;
-    @CsvBindByPosition(position = 1)
     private String station;
-    @CsvBindByPosition(position = 2)
+    private String chosung;
+    private String jamo;
+    private String engtokor;
     private String line;
-    @CsvBindByPosition(position = 3)
     private String excode;
 
     @Override
     public String toString() {
-        return "Subway{" +
+        return "SubwayDocument{" +
                 "code='" + code + '\'' +
                 ", station='" + station + '\'' +
+                ", chosung='" + chosung + '\'' +
+                ", jamo='" + jamo + '\'' +
+                ", engtokor='" + engtokor + '\'' +
                 ", line='" + line + '\'' +
                 ", excode='" + excode + '\'' +
                 '}';
@@ -29,6 +28,18 @@ public class Subway {
 
     public String getStation() {
         return station;
+    }
+
+    public String getChosung() {
+        return chosung;
+    }
+
+    public String getJamo() {
+        return jamo;
+    }
+
+    public String getEngtokor() {
+        return engtokor;
     }
 
     public String getLine() {
@@ -45,6 +56,18 @@ public class Subway {
 
     public void setStation(String station) {
         this.station = station;
+    }
+
+    public void setChosung(String chosung) {
+        this.chosung = chosung;
+    }
+
+    public void setJamo(String jamo) {
+        this.jamo = jamo;
+    }
+
+    public void setEngtokor(String engtokor) {
+        this.engtokor = engtokor;
     }
 
     public void setLine(String line) {
